@@ -1,0 +1,898 @@
+@font-face
+	{
+		font-family:"Roboto";
+		src:"webagency_images/fonts/Roboto-Black.ttf";
+		src:"webagency_images/fonts/Roboto-BlackItalic.ttf";
+		src:"webagency_images/fonts/Roboto-Bold.ttf";
+		src:"webagency_images/fonts/Roboto-BoldItalic.ttf";
+		src:"webagency_images/fonts/Roboto-Italic.ttf";
+		src:"webagency_images/fonts/Roboto-Light.ttf";
+		src:"webagency_images/fonts/Roboto-LightItalic.ttf";
+		src:"webagency_images/fonts/Roboto-Medium.ttf";
+		src:"webagency_images/fonts/Roboto-MediumItalic.ttf";
+		src:"webagency_images/fonts/Roboto-Regular.ttf";
+		src:"webagency_images/fonts/Roboto-Thin.ttf";
+		src:"webagency_images/fonts/Roboto-ThinItalic.ttf";
+	}
+
+body
+	{
+		font-family: Roboto;
+		width: 100%;
+		margin: 0;
+	}
+
+section
+	{
+		width: 100%;
+
+	}
+
+@media screen and (max-width: 767px)
+	{
+		#slider
+			{
+				height: 600px;
+			}
+	}	
+
+@media screen and (min-width: 768px)
+	{
+		#slider
+			{
+				height: 600px;
+			}
+	}
+
+@media screen and (min-width: 992px)
+	{
+		#slider
+			{
+				height: 900px;
+			}
+	}
+
+@media screen and (min-width: 1024px)
+	{
+		#slider
+			{
+				height: 1000px;
+			}
+	}
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------bannière fixe-----------------------------------------------------------------------------------*/
+#menu
+	{
+		position:fixed;
+		display: flex;
+		width: 100%;
+		height: 10%;
+		justify-content: space-around;
+		background-color: rgba(255,255,255,0.9);
+		z-index: 4;
+	}
+
+.logo img
+	{
+		padding-top: 8%;
+		width: 15vw;
+	}
+
+#menuNavigation ul 
+	{
+		display: flex;
+		margin: auto;
+		list-style-type: none;
+		height: 100%;
+	}
+
+#menuNavigation .fas /*for the mobile version of the  menu*/
+	{
+		font-size: 3em;
+		margin-top: 0.2em;
+		color: rgb(92,173,211);
+		display: none;
+	}
+
+#menuNavigation li
+	{
+		padding-right: 5%;
+		padding-left: 5%;
+		padding-top: 9%;
+		color: rgb(128,128,128);
+	}
+
+#menuNavigation li:hover
+	{
+		color:rgb(0,0,0);
+		border-top: 2px solid  rgb(92,173,211);
+		cursor: pointer;
+	}
+
+@media screen and (max-width: 991px)
+	{
+	.logo img
+		{
+			width: 30vw;
+		}
+	}
+@media screen and (max-width: 767px)
+	{
+	#menu
+		{
+			height: 10%;
+		}
+	.logo img
+		{
+			margin-left: 30%;
+		}
+
+	#menuNavigation 
+		{
+			display: flex;
+		}
+	#menuNavigation ul 
+		{
+			flex-direction: column;
+			font-size: 0.9em;
+			display:none;
+		}
+	#menuNavigation .fas
+		{
+			display: block;
+		}
+	#menuNavigation .fas:active  +ul 
+		{
+			display: block;
+		}
+	#menuNavigation ul:hover 
+		{
+			display: block;
+		}
+
+	}
+/*--------------------------------------------------------------------------------------------------------------Section slider------------------------------------------------------------------------------*/
+
+#slider  
+	{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		font-size: 0.8vw;
+	}
+
+.texte
+	{
+		font-weight: bold;
+		position:absolute;
+		display: flex;
+		flex-direction: column;
+		bottom: 38%;
+		left: 15%;
+	}
+
+h1
+	{
+		text-transform: uppercase;
+		color: rgb(255,255,255);
+		font-size: 2.8em;
+		line-height: 1em;
+		margin-bottom: 0;
+	}
+
+#webAgency
+	{
+		color: rgb(92,173,211);
+	}
+
+#slogan 
+	{
+		color: rgb(255,255,255);
+		font-size: 1.2em;
+	}
+
+button 
+	{
+		color: rgb(255,255,255);
+		font-size: 1.1em;
+		font-weight: bold;
+		background-color: rgb(92,173,211);
+		border-bottom: 3px solid rgb(70,140,173);
+		border-left: none;
+		border-right: none;
+		border-top: none;
+		margin-top: 1%;
+		margin-bottom: 0;
+		padding-top: 2%;
+		padding-bottom: 2%;
+		padding-left: 1%;
+		padding-right: 1%;
+		border-radius: 5px;
+		width: 20%;
+	}
+
+.slide
+	{
+		margin-top: 100px;
+		width: 100%;
+		position: absolute;
+	}
+
+.imageSlide img
+	{
+		width: 100%;
+		position: relative;
+		height: 100%;
+	}
+
+#boutonSlider
+	{
+		display: flex;
+		justify-content: space-between;
+		position: absolute;
+		bottom: 43%;
+		width: 100%;
+	}
+
+#boutonSlider .fas 
+	{
+		color: rgb(255,255,255);
+		font-size: 1.9em;
+		position: relative;	
+	}
+
+#demiCercleGauche
+	{
+		height: 3em;
+		width: 6em;
+		border-radius: 50%  / 100% 100% 0  0 ;
+		background-color: rgba(0,0,0,0.2);
+		transform: rotate(90deg);
+		position: relative;
+		right: 25%;
+		bottom: 49%;
+
+	}
+
+#demiCercleDroit
+	{
+		height: 3em;
+		width: 6em;
+		border-radius: 50%  /100% 100% 0  0 ;
+		background-color: rgba(0,0,0,0.2);
+		transform: rotate(-90deg);
+		position: relative;
+		left: 25%;
+		bottom: 49%;
+	}
+
+#boutonGauche .fas
+	{
+		position: relative;
+		left: 15%;
+	}
+
+#boutonDroit .fas
+	{
+		position: relative;
+		left: 65%;
+	}
+
+#timeline
+	{
+		padding: 3px;
+		background-color: rgb(92,173,211);
+		width: 10%;
+		height: 0.2%;
+		position: absolute;
+		bottom: 0.6%;
+	}
+
+#fondTimeline
+	{
+		padding-top: 3px;
+		padding-bottom: 3px;
+		background-color: rgba(0,0,0,0.2);
+		width: 100%;
+		height: 0.1%;
+		position: absolute;
+		bottom: 0.8%;
+	}
+
+@media screen and (max-width: 991px)
+	{
+	#slider
+		{
+			font-size: 1.5vw;
+		}
+
+	.texte
+		{
+			bottom: 20%;
+		}
+
+	#boutonSlider
+		{
+			display: none;
+		}
+
+	#timeline
+		{
+			display:none;
+		}
+
+	#fondTimeline
+		{
+			display:none;
+		}
+
+
+	}
+@media screen and (max-width: 767px)
+	{
+	.texte
+			{
+				top: 120%;
+				font-size: 2vw;
+				left: 0;
+				text-align: center;
+				position: relative;
+			}
+
+	h1
+		{
+
+			color: rgb(128,128,128);
+			
+		}
+
+	#slogan 
+		{
+			color: rgb(128,128,128);
+			font-size: 1.5em;
+		}
+
+	button 
+		{
+	
+			display: none;
+		}
+	}
+
+
+/*---------------------------------------------------------------------------------------------------------Style commun aux h2-----------------------------------------------------------------------*/
+
+h2
+	{
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 3em;
+	}
+
+.traitH2
+	{
+		display: flex;
+		flex-direction: column;
+	}
+
+.trait
+	{
+		padding: 0.03%;
+		background-color: rgb(211,211,211);
+		width: 10%;
+		margin: auto;
+		position: relative;
+	}
+
+.rond
+	{
+		background-color: rgb(92,173,211);
+  		height: 16px;
+  		width: 16px;
+  		border-radius: 50%;
+  		border: solid 4px rgb(255,255,255);
+  		margin: auto;
+  		position: relative;
+  		bottom: 12px;
+	}
+
+@media screen and (max-width: 991px)
+	{
+	.trait
+		{
+			display: none;
+		}
+	}
+/*---------------------------------------------------------------------------------------------------Section nos services---------------------------------------------------------------------------*/
+
+#descriptionServices
+	{
+		text-align: center;
+		color: rgb(128,128,128);
+		font-size: 1em;
+	}
+
+#contenuServices
+	{
+		display: flex;
+		justify-content: space-around;
+		position: relative;
+		width : 100%;
+	}
+
+#imageServices
+	{
+		width: 50%;
+		position: relative;
+	}
+
+#imageServices img
+	{
+		width: 75%;
+		position: relative;
+		left: 15%;
+	}
+
+dl
+	{
+		display: flex;
+		flex-direction: column;
+		width: 40%;
+		padding-top: 8%;
+		position: relative;
+	}
+
+.blocService
+	{
+		display: flex;
+		position: relative;
+	}
+
+.texteService
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		position: relative;
+		left: 5%;
+	}
+
+.iconeService
+	{
+		position: relative;
+		display: flex;
+		height: 100%;
+	}
+
+.iconeService .rond2
+	{
+		background-color: rgb(92,173,211);
+  		height: 14px;
+  		width: 14px;
+  		border-radius: 50%;
+  		border: solid 4px rgb(255,255,255);
+  		position: relative;
+  		top: 20px;
+  		right: 20px;
+	}
+
+.iconeService .fas 
+	{
+		position:relative;
+		color: rgb(92,173,211);
+		font-size: 1.8em;
+		padding: 15px;
+		border-radius: 50%;
+  		border: solid 1px rgb(211,211,211);
+  		right: 10%;
+  		height: 29px; /* For mozilla and edge*/
+	}
+
+dt
+	{
+		font-size: 1.2em;
+		font-weight: bold;
+		width: 100%;
+		position: relative;
+	}
+
+dd
+	{
+		color: rgb(128,128,128);
+		font-size: 1em;
+		width: 70%;
+		position: relative;	
+		margin: 0;
+		padding-bottom: 5%;
+	}
+
+@media screen and (max-width: 991px)
+	{
+	#contenuServices
+		{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+	#imageServices img
+		{
+			width: 100%;
+			position: relative;
+			left: 0;
+		}
+
+	dl
+		{
+			margin-left: 15%;
+			width: 80%;
+		}
+	}
+
+@media screen and (max-width: 767px)
+	{
+	dl
+		{
+			margin-left: 0;
+		}
+	dd
+		{
+			width: 100%;
+		}
+	}
+
+/* ----------------------------------------------------------------------------------------------------Section  nos projets--------------------------------------------------------------*/
+#nosProjets
+	{
+		background-color: rgb(245,245,245);
+	}
+
+#descriptionProjets
+	{
+		text-align: center;
+		color: rgb(128,128,128);
+	}
+
+#menuProjets 
+	{
+		display: flex;
+		list-style-type: none;
+		justify-content: center;
+		padding: 0;
+	}
+
+#menuProjets li 
+	{
+		padding: 10px;
+		background-color: rgb(211,211,211);
+		color: rgb(128,128,128);
+		width: 12%;
+		text-align: center;
+	}
+
+#premierBloc
+	{
+		border-bottom-left-radius: 5px;
+		border-top-left-radius: 5px;
+	}
+
+#dernierBloc
+	{
+		border-bottom-right-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+
+#menuProjets .fas 
+	{
+		font-size: 1.5em;
+		position: relative;
+		top: 105%;
+		left: 15%;
+		color: transparent;
+	}
+#menuProjets li:hover
+	{
+		background-color: rgb(92,173,211);
+		color: rgb(255,255,255);
+		font-weight: bold;
+		border-bottom: 3px solid rgb(70,140,173);
+ 	}
+
+#menuProjets:not(:hover) li#premierBloc
+	{
+		background-color: rgb(92,173,211);
+		color: rgb(255,255,255);
+		font-weight: bold;
+		border-bottom: 3px solid rgb(70,140,173);
+ 	}
+
+#menuProjets li:hover .fas 
+	{
+		font-size: 1.5em;
+		position: relative;
+		top: 105%;
+		left: 15%;
+		color: rgb(70,140,173);
+	}
+
+#menuProjets:not(:hover) li#premierBloc .fas
+	{
+		font-size: 1.5em;
+		position: relative;
+		top: 105%;
+		left: 15%;
+		color: rgb(70,140,173);
+	}
+
+.ligne
+	{
+		display: flex;
+		justify-content: space-around;
+		font-size: 0.8vw;
+	}
+
+.item 
+	{
+ 		width: 23%;
+ 		display: flex;
+ 		flex-direction: column;
+ 		padding-bottom: 2%;
+	}
+
+.item img
+	{
+		width: 100%;
+	}
+
+.item .hoverItem
+	{
+		position: relative;
+		width: 100%;
+	}
+
+.hoverItem p
+	{
+		background-color: rgba(0,0,0,0.2);
+		color: rgb(255,255,255);
+		font-size: 1.5em;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		margin-bottom: 0;
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		cursor: pointer;
+	}
+
+.hoverItem .decale
+	{
+		padding-left: 0.5em;	
+	}
+
+
+.hoverItem .gras
+	{
+		font-weight: bold;
+		padding-left: 0.5em;
+	}
+
+
+
+.hoverItem .far
+	{
+		color: rgb(255,255,255);
+		background-color: rgb(92,173,211);
+		border-radius: 50%;
+		border: 2px solid rgb(255,255,255);
+		padding: 1.5em;
+		position: absolute;
+		bottom: 4.6em;
+		left: 18vw;
+	}
+
+.hoverItem
+	{
+		display: none;
+	}
+
+.item img:hover +.hoverItem
+	{
+		display: block;
+	}
+
+.hoverItem:hover 
+	{
+		display: block;
+	}
+
+@media screen and (max-width: 991px)
+	{
+	.ligne
+		{
+	 		flex-direction: column;
+	 		align-items: center;
+		}
+	.item 
+		{
+	 		width: 48%;
+	 		display: flex;
+	 		flex-direction: column;
+	 		padding-bottom: 2%;
+		}
+
+	.hoverItem p
+		{
+			font-size: 2.5em;
+		}
+
+	.hoverItem .far
+		{
+			font-size: 2em;
+			bottom: 3.8em;
+			left: 35vw;
+		}
+	}
+
+@media screen and (max-width: 767px)
+	{
+
+	#menuProjets li 
+		{
+			font-size: 0.8em;
+			width: 14%;
+		}
+		
+	.item 
+		{
+	 		width: 60%;
+	 		display: flex;
+	 		flex-direction: column;
+	 		padding-bottom: 2%;
+		}
+
+	.hoverItem p
+		{
+			font-size: 3.5em;
+		}
+
+	.hoverItem .far
+		{
+			font-size: 3em;
+			bottom: 3.2em;
+			left: 45vw;
+		}
+	}
+
+/*--------------------------------------------------------------------------------------------------------------------------Contact----------------------------------------*/
+
+iframe
+	{
+		width: 100%;
+		height: 75%;
+		border: 0;
+		position: absolute;
+		z-index: 1;
+	}
+
+#filtreMap
+	{
+		width: 100%;
+		height: 75%;
+		border: 0;
+		background-color: rgb(70,140,173, 0.4);
+		position: absolute;
+		z-index: 2;
+	}
+
+#formulaire
+	{
+		position: absolute;
+		z-index: 3;
+		background-color: rgba(255,255,255,0.8);
+		padding: 1%;
+		width: 20vw;
+		margin-top: 5%;
+		left: 68%;
+	}
+
+#contact p
+	{
+		color: rgb(128,128,128);
+	}
+
+#contactGras
+	{
+		font-size: 2em;
+		color: rgb(0,0,0);
+		font-weight: bold;
+	}
+
+#webAgencySas
+	{
+		font-weight: bold;
+	}
+
+.texteFormulaire
+	{
+		width: 99%;
+		color: rgb(128,128,128) ;
+		font-family: Roboto;
+	}
+
+textarea
+	{
+		width: 99%;
+		height: 12em;
+		color: rgb(128,128,128);
+		font-family: Roboto;
+	}
+
+.submit
+	{
+		color: rgb(255,255,255);
+		font-weight: bold;
+		font-size: 1em;
+		background-color: rgb(92,173,211);
+		border-bottom: 2px solid rgb(70,140,173);
+		border-top: none;
+		border-right: none;
+		border-left: none;
+		border-radius: 3px;
+		padding: 2%;
+	}
+
+@media screen and (max-width: 991px)
+	{
+	iframe
+		{
+			height: 75%;
+		}
+
+	#filtreMap
+		{
+			height: 75%;
+		}
+
+	#formulaire
+		{
+			position: relative;
+			width: 50vw;
+			text-align: center;
+			margin-top: 0;
+			margin-right: auto;
+			margin-left: auto;
+			left: 0;
+		}
+	}
+
+@media screen and (max-width: 767px)
+	{
+	iframe
+		{
+			height: 50%;
+		}
+
+	#filtreMap
+		{
+			height: 50%;
+		}
+
+	#formulaire
+		{
+			position: relative;
+			width: 50vw;
+			text-align: center;
+			margin-top: 0;
+			margin-right: auto;
+			margin-left: auto;
+			left: 0;
+		}
+	}
+
+
+
